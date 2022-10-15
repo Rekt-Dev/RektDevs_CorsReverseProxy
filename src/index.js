@@ -2,8 +2,10 @@ import 'dotenv/config';
 import uuidv4 from 'uuid/v4';
 import cors from 'cors';
 import express from 'express';
+import fetch from 'node-fetch';
 
 const app = express();
+const fetch = require('node-fetch');
 
 app.use(cors());
 
