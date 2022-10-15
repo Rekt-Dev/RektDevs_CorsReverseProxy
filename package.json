@@ -1,19 +1,20 @@
 {
-  "name": "node-express-server-rest-api",
+  "name": "mycorsproxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Build Status](https://travis-ci.org/rwieruch/node-express-server-rest-api.svg?branch=master)](https://travis-ci.org/rwieruch/node-express-server-rest-api) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/rwieruch/node-express-server-rest-api.svg)](https://greenkeeper.io/)",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
     "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],
-  "author": "",
+  "author": "RektDev",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "@types/cors": "^2.8.12",
     "nodemon": "^1.18.9"
   },
   "dependencies": {
@@ -23,5 +24,13 @@
     "express": "^4.18.2",
     "node-fetch": "^3.2.10",
     "uuid": "^3.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rekt-Dev/RektDevs_CorsReverseProxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rekt-Dev/RektDevs_CorsReverseProxy/issues"
+  },
+  "homepage": "https://github.com/Rekt-Dev/RektDevs_CorsReverseProxy#readme"
 }

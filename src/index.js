@@ -9,15 +9,24 @@ const fetch = require('node-fetch');
 
 app.use(cors());
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.get("/", async {req,res}=>{
+  const response= await fetch("https://jsonplaceholder.typicode.com/todos1")
+res.json(await respons.json())
+})
 
-app.use((req, res, next) => {
+/* app.use(express.json());
+app.use(express.urlencoded({ extended: true })); */
+
+app.listen(process.env.PORT, () =>
+  console.log(`Example app listening on port ${process.env.PORT}!`),
+);
+
+/* app.use((req, res, next) => {
   req.me = users[1];
   next();
-});
+}); */
 
-let users = {
+/* let users = {
   1: {
     id: '1',
     username: 'Robin Wieruch',
@@ -25,8 +34,8 @@ let users = {
   2: {
     id: '2',
     username: 'Dave Davids',
-  },
-};
+  }, */
+/* };
 
 let messages = {
   1: {
@@ -81,8 +90,4 @@ app.delete('/messages/:messageId', (req, res) => {
   messages = otherMessages;
 
   return res.send(message);
-});
-
-app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`),
-);
+}); */
