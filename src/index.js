@@ -9,17 +9,23 @@ const fetch = require('node-fetch');
 
 app.use(cors());
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.get("/", async {req,res}=>{
+  const response= await fetch("https://jsonplaceholder.typicode.com/todos1")
+  const data=await response.json()
+  res.json(await data)
+})
+
+/* app.use(express.json());
+app.use(express.urlencoded({ extended: true })); */
 
 app.listen(process.env.PORT, () =>
   console.log(`Example app listening on port ${process.env.PORT}!`),
 );
 
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   req.me = users[1];
   next();
-});
+}); */
 
 /* let users = {
   1: {
