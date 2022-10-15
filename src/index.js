@@ -73,10 +73,8 @@ app.post('/messages', (req, res) => {
 });
 
 app.delete('/messages/:messageId', (req, res) => {
-  const {
-    [req.params.messageId]: message,
-    ...otherMessages
-  } = messages;
+  const { [req.params.messageId]: message, ...otherMessages } =
+    messages;
 
   messages = otherMessages;
 
