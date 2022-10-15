@@ -11,8 +11,7 @@ app.use(cors());
 
 app.get("/", async {req,res}=>{
   const response= await fetch("https://jsonplaceholder.typicode.com/todos1")
-  const data=await response.json()
-  res.json(await data)
+res.json(await respons.json())
 })
 
 /* app.use(express.json());
