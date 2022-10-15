@@ -1,13 +1,14 @@
-import 'dotenv/config';
-import uuidv4 from 'uuid/v4';
-import cors from 'cors';
-import express from 'express';
-import fetch from 'node-fetch';
+/* import 'dotenv/config';
+ *//* import uuidv4 from 'uuid/v4';
+ */import cors from 'cors';
+const express = require(`express`)
+const fetch = require("node-fetch")
+const cors=require(`cors`)
 
 const app = express();
-const fetch = require('node-fetch');
-
 app.use(cors());
+
+
 
 app.get("/", async {req,res}=>{
   const response= await fetch("https://jsonplaceholder.typicode.com/todos1")
